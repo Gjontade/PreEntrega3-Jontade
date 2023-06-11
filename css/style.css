@@ -1,5 +1,14 @@
-/* FUENTE */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Skranji:wght@400;700&display=swap");
+main .invitacion1-2 div .tituloInvitacion2, main .invitacion1-2 div .tituloInvitacion1 {
+  padding-top: 2rem;
+  margin-top: 0.5;
+  text-align: center;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px black;
+  color: #dfdfdf;
+}
+
+/* FUENTE */
 * {
   font-family: "Skranji", cursive;
 }
@@ -10,67 +19,58 @@
   background-size: cover;
 }
 
-header {
-  /* HEADER - NAV */
-}
+/* HEADER - NAV */
 header .header {
   background-image: url(../img/fondo-piedra.jpg);
   background-size: cover;
   position: sticky;
 }
-header .navbar-brand img {
+header .header div .navbar-brand img {
   width: 13rem;
   height: 7rem;
+  transition: transform 1s ease;
 }
-header div ul li {
+header .header div .navbar-brand img:hover {
+  transform: rotatez(360deg);
+}
+header .header div div ul li {
   -webkit-text-stroke: 1px yellow;
   font-size: x-large;
 }
-header div ul li .activa {
+header .header div div ul li .activa {
   -webkit-text-stroke: 1px yellow;
   color: #eb0005;
 }
-header div ul li .activa:hover {
+header .header div div ul li .activa:hover {
   color: #eb0005;
   -webkit-text-stroke: 1px yellow;
 }
-header div ul li .inactiva {
+header .header div div ul li .inactiva {
   -webkit-text-stroke: 1px black;
   color: #dfdfdf;
 }
-header div ul li .inactiva:hover {
+header .header div div ul li .inactiva:hover {
   color: #eb0005;
   -webkit-text-stroke: 1px yellow;
 }
-header div ul li:hover {
+header .header div div ul li:hover {
   color: #eb0005;
   -webkit-text-stroke: 1px yellow;
 }
 
-@media (max-width: 576px) {
-  .navbar-brand img {
-    width: 120px;
-    height: auto;
-  }
-  .navbar-nav {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
-  }
-}
+/* CONTENIDO PRINCIPAL */
 main {
-  /* CONTENIDO PRINCIPAL */
   /* invitacion index */
   /* pagina menu */
   /* tarjetas de servicios */
   /* FORMULARIO */
 }
 main h3 {
-  color: rgb(255, 255, 255);
+  color: white;
   text-align: center;
 }
 main p {
-  color: rgb(255, 255, 255);
+  color: white;
   padding: 5% 20%;
   text-align: center;
 }
@@ -82,33 +82,17 @@ main .invitacion1-2 {
   border: solid 5px #292e49;
   border-radius: 2rem;
 }
-main .invitacion1-2 div .tituloInvitacion1 {
-  padding-top: 2rem;
-  margin-top: 0.5;
-  text-align: center;
-  font-size: 2rem;
-  -webkit-text-stroke: 1px black;
-  color: #dfdfdf;
-}
 main .invitacion1-2 div .imgInvitacion1 {
   margin: 2rem 4rem 2rem 0;
   border: solid 2px #292e49;
   border-radius: 1rem;
-}
-main .invitacion1-2 div .tituloInvitacion2 {
-  padding-top: 2rem;
-  margin-top: 0.5;
-  text-align: center;
-  font-size: 2rem;
-  -webkit-text-stroke: 1px black;
-  color: #dfdfdf;
 }
 main .invitacion1-2 div .imgInvitacion2 {
   margin: 2rem 4rem 2rem 0;
   border: solid 2px #292e49;
   border-radius: 1rem;
 }
-main .tituloMenu {
+main div .tituloMenu {
   padding-top: 5%;
   padding-bottom: 20px;
   text-align: center;
@@ -116,11 +100,21 @@ main .tituloMenu {
   -webkit-text-stroke: 1px #eb0005;
   color: yellow;
 }
+main div .presentacion {
+  transition: transform 0.3s ease;
+}
+main div .presentacion:hover {
+  transform: scale(1.2);
+}
 main .imgColumnas {
   width: 16rem;
   height: 12rem;
   border: double 10px black;
   margin: 5px auto;
+  transition: transform 0.3s ease;
+}
+main .imgColumnas:hover {
+  transform: scale(1.2);
 }
 main nav ol li {
   padding: 1% 0%;
@@ -130,22 +124,36 @@ main nav ol li strong {
   -webkit-text-stroke: 1px #dfdfdf;
   color: black;
 }
-main .tarjetas {
+main .row .tituloMenu {
+  padding-top: 5%;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px #eb0005;
+  color: yellow;
+}
+main .row .presentacion {
+  transition: transform 0.3s ease;
+}
+main .row .presentacion:hover {
+  transform: scale(1.1);
+}
+main article .tarjetas {
   background-color: rgba(128, 128, 128, 0.3568627451);
   border: solid 2px black;
   border-radius: 1rem;
   padding: 10px;
   margin: 5px auto;
 }
-main .tarjetas a {
+main article .tarjetas a {
   text-decoration: none;
 }
-main .tarjetas a .img-evento {
+main article .tarjetas a div .img-evento {
   width: 100%;
   height: 90%;
   border-radius: 1rem;
 }
-main .tarjetas a .textoEventos {
+main article .tarjetas a div .textoEventos {
   padding: 5px;
 }
 main form {
@@ -159,12 +167,37 @@ main form .newsleter {
   margin: 1rem;
 }
 
+footer {
+  /* PIE DE PAGINA */
+  background-image: url(../img/fondo-piedra.jpg);
+  background-size: cover;
+  padding: 20px 0px 5px 0px;
+}
+footer section .redes {
+  margin: 5px 5px;
+  padding: 5px auto;
+  transition: transform 0.3s ease;
+}
+footer section .redes:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+    width: 120px;
+    height: auto;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+  }
+}
 @media (max-width: 1200px) {
   aside img {
     display: none;
   }
 }
-/* FORMULARIO */
 @media (max-width: 576px) {
   h1.tituloInvitacion1,
   h1.tituloInvitacion2 {
@@ -179,17 +212,6 @@ main form .newsleter {
   .tituloMenu {
     font-size: 1.3rem;
   }
-}
-/* CONTENIDO PRINCIPAL */
-footer {
-  /* PIE DE PAGINA */
-  background-image: url(../img/fondo-piedra.jpg);
-  background-size: cover;
-  padding: 20px 0px 5px 0px;
-}
-footer section .redes {
-  margin: 5px 5px;
-  padding: 5px auto;
 }
 
 /*# sourceMappingURL=style.css.map */

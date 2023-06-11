@@ -1,5 +1,5 @@
+/* HEADER - NAV */
 header {
-	/* HEADER - NAV */
 	.header {
 		background-image: url(../img/fondo-piedra.jpg);
 		background-size: cover;
@@ -9,6 +9,10 @@ header {
 				img {
 					width: 13rem;
 					height: 7rem;
+					transition: transform 1s ease;
+					&:hover {
+						transform: rotatez(360deg);
+					}
 				}
 			}
 			div {
